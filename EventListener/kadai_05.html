@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>課題5</title>
+  </head>
+  <body>
+    <p id="count">0</p>
+    <button id="plusBtn">+</button>
+    <button id="minusBtn">-</button>
+
+    <script>
+      const countDisplay = document.getElementById('count');
+      const plusBtn = document.getElementById('plusBtn');
+      const minusBtn = document.getElementById('minusBtn');
+      let count = 0;
+
+      plusBtn.addEventListener('click', () => {
+        count++;
+        countDisplay.textContent = count;
+      })
+      minusBtn.addEventListener('click', () => {
+        if (count > 0) {
+          count--;
+          countDisplay.textContent = count;
+        } else if (count <=  0) {
+          countDisplay.textContent = 0;
+        }
+      })
+    </script>
+  </body>
+</html>

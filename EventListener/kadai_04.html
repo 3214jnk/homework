@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>課題4</title>
+  </head>
+  <body>
+    <button id="redBtn">赤</button>
+    <button id="blueBtn">青</button>
+    <button id="greenBtn">緑</button>
+
+    <script>
+      const redBtn = document.getElementById('redBtn');
+      const blueBtn = document.getElementById('blueBtn');
+      const greenBtn = document.getElementById('greenBtn');
+
+      redBtn.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'red';
+      })
+      blueBtn.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'blue';
+      })
+      greenBtn.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'green';
+      })
+    </script>
+  </body>
+</html>

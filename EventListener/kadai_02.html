@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>課題2</title>
+    <style>
+      #box {
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+
+    <script>
+      const box = document.getElementById('box');
+      box.addEventListener('mouseover', () => {
+        box.style.backgroundColor = 'blue'
+      })
+      box.addEventListener('mouseout', () => {
+        box.style.backgroundColor = ''
+      })
+
+    </script>
+  </body>
+</html>
