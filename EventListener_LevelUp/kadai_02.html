@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>課題2</title>
+  <style>
+    #warning {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>文字数カウンター</h1>
+
+  <input type="text" id="messageInput" placeholder="20文字以内で入力">
+  <p id="countText">現在 0 文字</p>
+  <p id="warning"></p>
+
+  <script>
+    const messageInput = document.getElementById("messageInput");
+    const countText = document.getElementById("countText");
+    const warning = document.getElementById("warning");
+
+    messageInput.addEventListener("input", function() {
+      countText.textContent = '現在 ' + messageInput.value.length + ' 文字';
+      if (messageInput.value.length > 20) {
+        warning.textContent = '20文字以内で入力してください';
+        messageInput.style.backgroundColor = '#fadbda';
+      } else {
+        warning.textContent = '';
+        messageInput.style.backgroundColor ='';
+      }
+    })
+  </script>
+</body>

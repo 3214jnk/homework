@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>課題1</title>
+  </head>
+  <body>
+    <h1>パスワード表示切り替え</h1>
+
+    <input type="password" id="passwordInput" placeholder="パスワードを入力">
+    <button id="toggleBtn">表示する</button>
+
+    <script>
+      const passwordInput = document.getElementById("passwordInput");
+      const toggleBtn = document.getElementById("toggleBtn")
+
+      toggleBtn.addEventListener("click", function() {
+        if (passwordInput.value === '') {
+          passwordInput.placeholder = 'パスワードを入力してください';
+        } else {
+          if (passwordInput.type === 'password') {
+           passwordInput.type = 'text';
+           toggleBtn.textContent = '非表示にする';
+          } else {
+           passwordInput.type = 'password';
+           toggleBtn.textContent = '表示する';
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
