@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript最終課題1：タスク管理アプリ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 16px;
+    }
+
+    h1 {
+      margin-bottom: 24px;
+    }
+
+    .form-area {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    input,
+    select,
+    button {
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    input {
+      flex: 1;
+    }
+
+    .error {
+      color: red;
+      font-weight: bold;
+      min-height: 24px;
+    }
+
+    .summary {
+      margin: 16px 0;
+      padding: 12px;
+      background-color: #f5f5f5;
+    }
+
+    .filter-area {
+      margin: 16px 0;
+    }
+
+    .filter-area button {
+      margin-right: 8px;
+    }
+
+    .filter-area button.active {
+      background-color: #333;
+      color: white;
+    }
+
+    .task-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .task-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px;
+      margin-bottom: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .task-item.completed .task-title {
+      text-decoration: line-through;
+      color: #888;
+    }
+
+    .task-info {
+      flex: 1;
+    }
+
+    .task-title {
+      font-weight: bold;
+    }
+
+    .priority {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 12px;
+      color: #555;
+    }
+
+    .actions button {
+      margin-left: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>タスク管理アプリ</h1>
+
+  <div class="form-area">
+    <input type="text" id="taskInput" placeholder="タスク名を入力">
+    <select id="prioritySelect">
+      <option value="高">高</option>
+      <option value="中" selected>中</option>
+      <option value="低">低</option>
+    </select>
+    <button id="addTaskBtn">追加</button>
+  </div>
+
+  <p id="errorMessage" class="error"></p>
+
+  <div class="summary">
+    <p>全体：<span id="totalCount">0</span>件</p>
+    <p>未完了：<span id="activeCount">0</span>件</p>
+    <p>完了済み：<span id="completedCount">0</span>件</p>
+  </div>
+
+  <div class="filter-area">
+    <button class="filter-btn active" data-filter="all">すべて</button>
+    <button class="filter-btn" data-filter="active">未完了</button>
+    <button class="filter-btn" data-filter="completed">完了済み</button>
+  </div>
+
+  <button id="clearCompletedBtn">完了済みをすべて削除</button>
+
+  <ul id="taskList" class="task-list"></ul>
+
+  <script src="task-app.js"></script>
+</body>
+</html>
