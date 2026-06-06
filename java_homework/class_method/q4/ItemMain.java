@@ -7,7 +7,7 @@ public class ItemMain {
 
 		Item shampoo = new Item( "シャンプー", 500);
 		
-		shampoo.getInfo();
+		System.out.println(shampoo.getInfo());
 	}
 
 }

@@ -5,12 +5,15 @@ public class Rectangle {
 	private int width  = 0;
 	private int height = 0;
 	
-//	メソッド
-	public int getArea( int width, int height) {
+//	コンストラクタ
+	public Rectangle( int width, int height ) {
 		this.width  = width;
 		this.height = height;
+	}
+	
+//	メソッド
+	public int getArea() {
 		int result = this.width * this.height;
-		System.out.println(result);
 		return result;
 	}
 

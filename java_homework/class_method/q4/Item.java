@@ -12,9 +12,9 @@ public class Item {
 	}
 	
 //	メソッド
-	public void getInfo() {
-		System.out.println( "商品名：" + this.name );
-		System.out.println( "価格：" +this.price + "円");
+	public String getInfo() {
+		String info = "商品名：" + this.name + ",価格：" +this.price + "円";
+		return info;
 	}
 
 }

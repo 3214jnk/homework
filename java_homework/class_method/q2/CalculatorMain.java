@@ -5,10 +5,9 @@ public class CalculatorMain {
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 
-		Calculator addNumber = new Calculator();
+		Calculator addNumber = new Calculator(6, 17);
 		
-		addNumber.add(6, 5);
-		addNumber.add(6, 53);
+		System.out.println(addNumber.add());
 	}
 
 }
